@@ -3,5 +3,35 @@ requires = [
   "setuptools>=42",
   "nanobind@git+https://github.com/wjakob/nanobind.git@2f04eac452a6d9142dedb957701bdb20125561e4",
   "cmake>=3.24",
+  "pip",
 ]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "mlx"
+description = "MLX: An array framework for Apple silicon"
+version = "0.16.3"
+authors = [
+    { name = "yuta0306", email = "yuta.20010306@gmail.com" }
+]
+dependencies = [
+    "pip>=24.2",
+]
+requires-python = ">= 3.11"
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+  "flake8",
+  "mypy",
+  "black",
+  "isort",
+  "pynvim",
+  "nanobind==2.0",
+  "numpy",
+  "pre-commit",
+  "setuptools>=42",
+  "torch",
+  "typing_extensions",
+]

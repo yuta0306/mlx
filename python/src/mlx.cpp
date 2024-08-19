@@ -23,8 +23,8 @@ void init_distributed(nb::module_&);
 NB_MODULE(core, m) {
   m.doc() = "mlx: A framework for machine learning on Apple silicon.";
 
-  auto reprlib_fix = nb::module_::import_("mlx._reprlib_fix");
-  nb::module_::import_("mlx._os_warning");
+  // auto reprlib_fix = nb::module_::import_("mlx._reprlib_fix");
+  // nb::module_::import_("mlx._os_warning");
   nb::set_leak_warnings(false);
 
   init_device(m);
